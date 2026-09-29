@@ -1,18 +1,16 @@
-# Device tree for the Redmi Pad Pro (dizi), Evolution X bka (Android 16)
+# Device tree for the Redmi Pad Pro (ruan), Axion based (Android 16)
 
-Redmi Pad Pro Wi-Fi, codename `dizi`, SM7435 ("parrot"). Not for the 5G model (`ruan`).
-This tree started as a fork of the Evolution X garnet (Redmi Note 13 Pro 5G) tree, which uses the same SoC.
+Redmi Pad Pro 5G, codename `ruan`, SM7435 ("parrot"). Not for the wifi model (`dizi`).
 
 ## Building
 
-1. `repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs`
-2. Copy [`dizi.xml`](https://github.com/g8row/dizi-bringup/blob/main/release/manifest/dizi.xml) to
-   `.repo/local_manifests/`.
+1. `repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs`
+2. search and duck the ruan manifest.
 3. `repo sync`
 4. Apply the platform patches in `patches/<project path>/` with `git am` in each project.
 5. Build:
    ```
-   source build/envsetup.sh && lunch lineage_dizi-bp4a-user && m evolution
+   source build/envsetup.sh && lunch ...then ax -b based on ur choice
    ```
 
 ## Platform patches
@@ -47,4 +45,7 @@ The switches are in `BoardConfig.mk`:
 
 The tablet must run HyperOS OS3.0.303.0 or newer. The ROM does not flash firmware partitions.
 
-Bring-up notes, tooling and install instructions are in [dizi-bringup](https://github.com/g8row/dizi-bringup).
+Thanks for the base tree:
+[dizi-bringup](https://github.com/g8row/dizi-bringup).
+[garnet-random](https://github.com/garnet-random) — kernel source and base device tree (Redmi Note 13 Pro)
+[LineageOS](https://github.com/LineageOS) — Android base
