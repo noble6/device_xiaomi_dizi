@@ -41,10 +41,6 @@ The switches are in `BoardConfig.mk`:
 - `DIZI_ADB_KEYS=<adb_keys>`: debuggable builds trust this adb key file (a path relative to the source root).
 - `WITH_ADB_INSECURE=true`: adb without authorization on debuggable builds.
 
-## Firmware
-
-The tablet must run HyperOS OS3.0.303.0 or newer. The ROM does not flash firmware partitions.
-
 Thanks for the base tree:
 [dizi-bringup](https://github.com/g8row/dizi-bringup).
 [garnet-random](https://github.com/garnet-random) — kernel source and base device tree (Redmi Note 13 Pro)
